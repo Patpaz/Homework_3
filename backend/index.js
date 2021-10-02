@@ -11,7 +11,7 @@ function show_menu(req,res){
         password: 'mapagi13',
         database: 'menu'
     });
-
+    
     connection.connect();
     var my_Query = "select dish_id, name, price, created_date, modified_date from dishes; "
 
@@ -21,6 +21,4 @@ function show_menu(req,res){
         connection.end();
     });
 }
-
-
 app.listen(3000);
